@@ -4,12 +4,12 @@ body{
 }
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding: 0;
-    margin-left: 40px;
-    margin-right: 40px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    width: 100%;
     position: sticky;
     top: 0; 
     z-index: 1;
@@ -22,7 +22,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 2px;
 }
 
 .navbar__icons {
@@ -33,9 +33,9 @@ body{
 }
 
 .navbar__logo img {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+    width: 200px;
+    height: 150px;
+    margin-left: 5px;
 }
 
 
@@ -77,13 +77,14 @@ body{
     cursor: pointer;
 }
 .search1{
-    display: flex;
-    width:90%;
+    
+    display: none;
+    flex: 1;
+    max-width: 220px;
     border: solid black 1px;
     padding: 10px;
     align-items: center;
     border-radius: 30px;
-    display: none;
     gap:5px;
     }
     .search1 input{
@@ -103,7 +104,7 @@ body{
 }
 .search{
     display: flex;
-    width:50%;
+    width:60%;
     border: solid black 1px;
     justify-content: space-between;
     padding: 10px;
@@ -119,6 +120,7 @@ body{
     }
     .search__buttons p{
         display: inline;
+        width: 20%;
     }
     .search__button1{
         border: solid black 1px;
@@ -143,16 +145,20 @@ body{
     padding: 10px;
     width: 70%;
     border-radius: 10px;
-    background-color: #00eb5b;
+    background-color: #1B2A3A;
     display: none;
+    color: white;
 }
 .body__image img{
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
+    display: block;
 }
 .body__content{
-    width:500px;
+    width: 100%;
+    max-width: 500px;
 }
 .body__content h1{
     padding: 10px;
@@ -161,6 +167,7 @@ body{
     margin: 0; 
     letter-spacing: -1px;
     line-height: 0.95;
+    
 }
 .book{
     border: solid black 1px;
@@ -168,18 +175,23 @@ body{
     padding: 12px;
     border-radius: 30px;
     margin-left: 130px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
+}
+.interest{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 .interest__content{
-    margin-left: 125px;
-    margin-top: 10px;
+    margin-left: 0;
 }
 .interest__img{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    
+    gap: 1%;
 }
 .interest__img img{
     width: 100%;
@@ -190,9 +202,10 @@ body{
 }
 .interest__card{
     position: relative;
-    width: 275px;
-    height: 275px;
-    margin: 10px;
+    width: 23%;
+    max-width: 280px;
+    height: 200px;
+    box-sizing: border-box;
 }
 .interest__title{
     position: absolute;
@@ -200,30 +213,40 @@ body{
     left:15px;
     color: white;
     overflow-wrap: break-word;
-    font-size: 30px;
+    font-size: 20px;
+}
+.outdoor{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.outdoor__content{
+    margin-left: 0px;
 }
 .outdoor_container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 .outdoor__cards{
-    width: 275px;
-    height: 275px;
-    margin: 10px;
+    width: 23%;
+    max-width: 280px;
+    margin: 1%;
     position: relative;
+    box-sizing: border-box;
 }
 .outdoor__cards img{
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
 }
-.outdoor__cards h4,p{
-    line-height: 0.95;
+.outdoor__cards h4, .outdoor__cards p{
+    line-height: 1.2;
     letter-spacing: -1px;
+    margin: 4px 0;
 }
 .favorite-btn{
     position: absolute;
@@ -250,9 +273,10 @@ body{
 }
 .travellers{
     background-color: black;
-    margin-top:100px;
+    margin-top: 100px;
     width: 100%;
-    height:500px;
+    height: auto;
+    padding: 40px 0;
     margin-left: 0;
     margin-right: 0;
 }
@@ -260,6 +284,9 @@ body{
     display: flex;
     overflow: hidden;
     justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
 }
 .travellers__title{
     color:white;
@@ -267,9 +294,16 @@ body{
     text-align: left;
     margin-left: 10px;
     flex: 1;
+    order: 2;
 }
-.travel_img img{
+.travel__img{
     flex: 1;
+    order: 1;
+}
+.travel__img img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .winners{
     border: solid #ffc56f 1px;
@@ -303,6 +337,9 @@ body{
 .footer__two{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
 }
 .footer__two__s1{
     display: flex;
@@ -313,8 +350,15 @@ height: 50px;
 margin-right: 0px;
 margin-left: 150px;
 }
+.footer__two__s2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
 .footer__two__s2__dropdown{
-    margin-right: 400px;
+    display: flex;
+    gap: 10px;
 }
 .currency,.country{
     padding: 10px;
@@ -346,6 +390,11 @@ margin-left: 150px;
     }
 }
 @media screen and (max-width:600px) {
+    .navbar{
+        padding: 10px 12px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
     .search1 {
         display:block;
     }
@@ -360,14 +409,87 @@ margin-left: 150px;
     }
     .body{
         display: block;
-        width:100%;
-        margin-left:0px;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 10px 12px;
+        box-sizing: border-box;
         text-align: left;
     }
     .body p{
         margin-left: 12px;
     }
+    .body__content{
+        width: 100%;
+        max-width: 500px;
+    }
+    .body__content h1{
+        font-size: 32px;
+        padding: 10px 12px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    .interest__card{
+        width: 48%;
+        height: 150px;
+        margin-top: 5%;
+    }
+    .outdoor__cards{
+        width: 48%;
+    }
     .menubar{
         display: block;
+    }
+    .travellers{
+        height: auto;
+        padding: 0 0 30px 0;
+    }
+    .travellers__container{
+        flex-direction: column;
+        overflow: visible;
+        align-items: stretch;
+        padding: 0 20px;
+        gap: 20px;
+    }
+    .travellers__title{
+        margin-top: 0;
+    }
+    .travel__img{
+        width: 100%;
+    }
+    .travel__img img{
+        margin-top: 5%;;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .footer{
+        height: auto;
+        padding: 30px 0;
+    }
+    .footer__container{
+        margin-top: 30px;
+        margin-left: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer__two{
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 20px;
+        align-items: flex-start;
+    }
+    .footer__two__s1{
+        gap: 10px;
+        align-items: center;
+    }
+    .footer__two img{
+        margin-left: 0;
+    }
+    .footer__two__s2__dropdown{
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }

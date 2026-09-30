@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing Border Button</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .ai-button-wrapper {
+      position: relative;
+      display: inline-block;
+      padding: 2px; /* Border thickness */
+      border-radius: 50px;
+      background: linear-gradient(90deg, #00eb87, #8aefb8, #ffffff, #00eb87);
+      background-size: 300% 300%;
+      animation: glowingBorder 4s ease infinite;
+    }
+
+    /* Soft outer glow shadow */
+    .ai-button-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: inherit;
+      background: inherit;
+      background-size: inherit;
+      filter: blur(8px);
+      opacity: 0.6;
+      z-index: 0;
+      animation: glowingBorder 4s ease infinite;
+    }
+
+    .ai-button {
+      position: relative;
+      z-index: 1;
+      background-color: #e2fbe8; /* Light greenish background inside */
+      color: #000000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @keyframes glowingBorder {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ai-button-wrapper">
+    <button class="ai-button">
+      Plan with AI
+    </button>
+  </div>
+
+</body>
+</html>
